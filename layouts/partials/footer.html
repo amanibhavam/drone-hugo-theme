@@ -33,8 +33,8 @@
   });
 </script>
 {{ else }}
-<script src="/autocomplete.js"></script>
-<script src="/fuse.js"></script>
+<script src="{{ "autocomplete.js" | relURL }}"></script>
+<script src="{{ "fuse.js" | relURL }}"></script>
 <script>
 var options = {
   shouldSort: true,
