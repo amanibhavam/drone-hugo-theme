@@ -4,7 +4,7 @@
 
     {{ $hide_children := .Node.Params.hide_children }}
 
-    {{ if and (eq (len .Node.Pages) 0) (eq (len .Node.Sections) 0) }}
+    {{ if and (eq (len .Node.RegularPages) 0) (eq (len .Node.Sections) 0) }}
     <li{{ if eq $selected .Node }} class="selected active"{{ else if $hide_children }} class="hide_children"{{ else if eq .Node.Params.external true}} class="open-in-new"{{ end }}>
         <a href="{{ .Node.URL }}" {{ if eq .Node.Params.external true}}target="_blank"{{ end }}>{{ markdownify .Node.Title }}</a>
     </li>
@@ -21,7 +21,7 @@
                 <a href="{{ .Node.URL }}">{{ markdownify .Node.Title }}</a>
             </summary>
             <ul>
-            {{ range .Node.Pages }}
+            {{ range .Node.RegularPages }}
             {{ template "branch" (dict "Node" .  "Selected" $selected) }}
             {{ end }}
 

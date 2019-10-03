@@ -17,10 +17,10 @@
                 {{ .Content }}
 
                 <ul>
-                    {{ range .Pages }} 
+                    {{ range .RegularPages }}
                         <li>
                             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        </li>   
+                        </li>
                     {{ end }}
                 </ul>
             </section>
