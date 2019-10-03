@@ -18,7 +18,7 @@
 
                 <div class="cards">
                     {{ range .Pages }}                        
-                        <a href="{{ .Permalink }}">
+                        <a href="{{ .RelPermalink }}">
                             <span class="name">{{ .Title }}</span>
                             {{ if .Description }}
                             <span class="desc">{{ .Description }}</span>
@@ -27,7 +27,7 @@
                     {{ end }}
 
                     {{ range .Sections }}                        
-                        <a href="{{ .Permalink }}">
+                        <a href="{{ .RelPermalink }}">
                             <span class="name">{{ .Title }}</span>
                             {{ if .Description }}
                             <span class="desc">{{ .Description }}</span>
