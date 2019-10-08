@@ -1,6 +1,6 @@
 {{ $page := .Site.GetPage (.Get 0) }}
-<a href="{{ $page.URL }}" class="reference">
+<a href="{{ $page.RelPermalink }}" class="reference">
     <span class="icon"></span>
     <span class="name">{{ $page.Title }}</span>
-    <span class="path">{{ strings.TrimSuffix "/" $page.URL }}</span>
+    <span class="path">{{ strings.TrimSuffix "/" $page.RelPermalink }}</span>
 </a>
